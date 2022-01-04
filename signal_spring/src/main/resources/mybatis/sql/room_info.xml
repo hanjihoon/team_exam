@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?> <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.iot.test.mapper.RoomInfoMapper">
+	<select id="selectRoomInfoList" parameterType="map" resultType="map"> 
+	select * from room_info where rName=#{rName};		
+	</select>
+	
+	<insert id="insertRoomInfo" parameterType="map">
+	insert into room_info(rName,rSize,rTag,rRegDate,categoryNo,regeonNo,iconName)
+	values(#{rName},#{rSize},#{rTag},current_timestamp(),#{categoryNo},#{regeonNo},#{iconName})
+	
+	</insert>
+</mapper>
+

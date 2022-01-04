@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?> <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.iot.test.mapper.RegeonMapper">
+	<select id="selectRegeonList" resultType="map"> 
+	select * from regeon where 1=1		
+	</select>
+	
+	<select id="selectRegeonNo" parameterType="String" resultType="map"> 
+	select regeonNo from regeon where regeonName = #{regeonName}	
+	</select>
+	
+</mapper>
+
